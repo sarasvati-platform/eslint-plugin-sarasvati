@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-sarasvati",
+  "name": "@sarasvati-platform/eslint-plugin-sarasvati",
   "version": "0.0.1",
   "description": "ESlint rules for the Sarasvati platform",
   "keywords": [
