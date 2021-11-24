@@ -1,4 +1,4 @@
-const rule = require('../../../lib/rules/business-rule-should-throw')
+const rule = require('../../../lib/rules/business-rule-in-rules-folder')
 const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
@@ -11,17 +11,17 @@ const ruleTester = new RuleTester({
 ruleTester.run('business-rule-in-rules-folder', rule, {
     valid: [
         {
-            code: 'class TestRule { check() { throw new Exception() } }',
+            code: 'class TestRule { }',
             filename: 'rules/test-rule.js'
         }
     ],
 
     invalid: [
         {
-            code: 'class TestRule { check() {} }',
+            code: 'class TestRule { }',
             filename: 'somethere/test-rule.js',
             errors: [{
-                message: 'Check function of a business rule class must throw an exception',
+                message: 'Put TestRule into rules folder',
                 type: 'Identifier'
             }]
         }
