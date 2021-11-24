@@ -19,7 +19,7 @@ ruleTester.run('business-rule-should-have-check-func', rule, {
             errors: [{
                 message: 'Business rule TestRule must have check method',
                 type: 'Identifier'
-            }],
-        },
-    ],
+            }]
+        }
+    ]
 })
